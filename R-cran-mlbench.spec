@@ -4,13 +4,14 @@ Summary:	Machine Learning Benchmark Problems
 Summary(pl):	Problemy wydajno¶ci uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	1.0r0
-Release:	1
+Release:	2
 License:	Free for non-commercial purposes (see README and data sets help pages for details)
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	101108689bd005ef96641a8c33f17698
 BuildRequires:	R-base >= 2.0.0
 Provides:	R-mlbench
+Obsoletes:	R-mlbench
 Requires(post,postun):	R-base >= 2.0.0
 Requires(post,postun):	perl-base
 Requires(post,postun):	textutils
