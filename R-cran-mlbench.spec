@@ -1,11 +1,11 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	mlbench
 Summary:	Machine Learning Benchmark Problems
-Summary(pl):	Testy wydajno¶ci uczenia maszyny
+Summary(pl):	Problemy wydajno¶ci uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	1.0r0
 Release:	1
-License:	Free for non-commercial purposes. See the file README and the help pages of the data sets for details.
+License:	Free for non-commercial purposes (see README and data sets help pages for details)
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	101108689bd005ef96641a8c33f17698
@@ -21,9 +21,9 @@ A collection of artificial and real-world machine learning benchmark
 problems, including, e.g., several data sets from the UCI repository.
 
 %description -l pl
-Ten podpakiet R zawiera zestaw rzeczywistych danych i funkcji do
-tworzenia sztucznych danych s³u¿±cych jako test wydajno¶ci metod
-uczenia maszyny.
+Ten podpakiet R zawiera zestaw sztucznych i prawdziwych problemów
+wydajno¶ci uczenia maszyn, w tym kilka zbiorów danych z repozytorium
+UCI.
 
 %prep
 %setup -q -c
