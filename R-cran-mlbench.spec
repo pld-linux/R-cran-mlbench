@@ -4,15 +4,15 @@ Summary:	Machine Learning Benchmark Problems
 Summary(pl):	Problemy wydajno¶ci uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	1.0r0
-Release:	2
+Release:	3
 License:	Free for non-commercial purposes (see README and data sets help pages for details)
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	101108689bd005ef96641a8c33f17698
-BuildRequires:	R-base >= 2.0.0
+BuildRequires:	R-base >= 2.4.0
 Provides:	R-mlbench
 Obsoletes:	R-mlbench
-Requires(post,postun):	R-base >= 2.0.0
+Requires(post,postun):	R-base >= 2.4.0
 Requires(post,postun):	perl-base
 Requires(post,postun):	textutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -41,12 +41,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 (cd %{_libdir}/R/library; umask 022; cat */CONTENTS > ../doc/html/search/index.txt
- R_HOME=%{_libdir}/R ../bin/Rcmd perl ../share/perl/build-help.pl --htmllist)
+ R_HOME=%{_libdir}/R ../bin/Rcmd perl ../share/perl/build-help.pl --index)
 
 %postun
 if [ -f %{_libdir}/R/bin/Rcmd ];then
 	(cd %{_libdir}/R/library; umask 022; cat */CONTENTS > ../doc/html/search/index.txt
-	R_HOME=%{_libdir}/R ../bin/Rcmd perl ../share/perl/build-help.pl --htmllist)
+	R_HOME=%{_libdir}/R ../bin/Rcmd perl ../share/perl/build-help.pl --index)
 fi
 
 %files
