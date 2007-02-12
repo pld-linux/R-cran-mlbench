@@ -1,7 +1,7 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	mlbench
 Summary:	Machine Learning Benchmark Problems
-Summary(pl.UTF-8):   Problemy wydajności uczenia maszyn
+Summary(pl.UTF-8):	Problemy wydajności uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	1.0r0
 Release:	3
