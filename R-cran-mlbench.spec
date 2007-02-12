@@ -1,7 +1,7 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	mlbench
 Summary:	Machine Learning Benchmark Problems
-Summary(pl):	Problemy wydajno∂ci uczenia maszyn
+Summary(pl.UTF-8):   Problemy wydajno≈õci uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	1.0r0
 Release:	3
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A collection of artificial and real-world machine learning benchmark
 problems, including, e.g., several data sets from the UCI repository.
 
-%description -l pl
-Ten podpakiet R zawiera zestaw sztucznych i prawdziwych problemÛw
-wydajno∂ci uczenia maszyn, w tym kilka zbiorÛw danych z repozytorium
+%description -l pl.UTF-8
+Ten podpakiet R zawiera zestaw sztucznych i prawdziwych problem√≥w
+wydajno≈õci uczenia maszyn, w tym kilka zbior√≥w danych z repozytorium
 UCI.
 
 %prep
