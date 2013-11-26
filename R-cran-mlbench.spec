@@ -4,7 +4,7 @@ Summary:	Machine Learning Benchmark Problems
 Summary(pl.UTF-8):	Problemy wydajności uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	2.1r1
-Release:	1
+Release:	2
 License:	Free for non-commercial purposes (see README and data sets help pages for details)
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
@@ -32,6 +32,7 @@ R CMD build %{modulename}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_libdir}/R/library/
 R CMD INSTALL %{modulename} --library=$RPM_BUILD_ROOT%{_libdir}/R/library/
 
 %clean
@@ -49,5 +50,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc %{modulename}/{DESCRIPTION,COPYING,NEWS,README}
+%doc %{modulename}/{DESCRIPTION,NEWS,README}
 %{_libdir}/R/library/%{modulename}
