@@ -1,13 +1,14 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	mlbench
+%undefine	_debugsource_packages
 Summary:	Machine Learning Benchmark Problems
 Summary(pl.UTF-8):	Problemy wydajności uczenia maszyn
 Name:		R-cran-%{modulename}
 Version:	2.1r1
-Release:	3
+Release:	4
 License:	Free for non-commercial purposes (see README and data sets help pages for details)
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	9f06848b8e137b8a37417c92d8e57f3b
 BuildRequires:	R >= 2.8.1
 Requires(post,postun):	R >= 2.8.1
